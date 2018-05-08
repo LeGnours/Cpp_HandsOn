@@ -26,6 +26,11 @@ protected:
 	ConcurrentAsyncQueueMock<int> *test_queue_;
 };
 
+INSTANTIATE_TEST_CASE_P(ConcurrentAsyncQueueInitParametized,
+						ConcurrentAsyncQueueInit,
+						Values(1, 3, 5, 7, 17, 23, 31)
+);
+
 TEST_P(ConcurrentAsyncQueueInit, ConstructorInitWithNoParams)
 {
 	test_queue_ = new ConcurrentAsyncQueueMock<int>();

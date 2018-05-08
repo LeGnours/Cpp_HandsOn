@@ -9,10 +9,5 @@ public:
 	using ConcurrentAsyncQueue<T>::ConcurrentAsyncQueue;
 
 	MOCK_METHOD0(get_queue_mutex, std::timed_mutex&());
-
-	size_t get_max_number_elements() const override
-	{
-		return ConcurrentAsyncQueue<T>::get_max_number_elements();
-	}
+	MOCK_METHOD0(get_capacity_changed, std::condition_variable_any&());
 };
- 
