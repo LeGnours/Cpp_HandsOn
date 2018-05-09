@@ -153,16 +153,20 @@
   <ItemGroup>
     <ClInclude Include="ConcurrentAsyncQueueInit.h" />
     <ClInclude Include="ConcurrentAsyncQueueMock.hpp" />
+    <ClInclude Include="ConcurrentAsyncQueuePop.h" />
     <ClInclude Include="ConcurrentAsyncQueuePush.h" />
     <ClInclude Include="ConcurrentAsyncQueueTestHelper.h" />
+    <ClInclude Include="ConcurrentAsyncQueueTryPush.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ConcurrentAsyncQueueInit.cpp" />
+    <ClCompile Include="ConcurrentAsyncQueuePop.cpp" />
     <ClCompile Include="ConcurrentAsyncQueuePush.cpp" />
     <ClCompile Include="ConcurrentAsyncQueueTestHelper.cpp" />
     <ClCompile Include="ConcurrentAsyncQueueTests.cpp" />
+    <ClCompile Include="ConcurrentAsyncQueueTryPush.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

@@ -33,6 +33,12 @@
     <ClInclude Include="ConcurrentAsyncQueueTestHelper.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="ConcurrentAsyncQueuePop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConcurrentAsyncQueueTryPush.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -48,6 +54,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ConcurrentAsyncQueueTestHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConcurrentAsyncQueuePop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConcurrentAsyncQueueTryPush.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

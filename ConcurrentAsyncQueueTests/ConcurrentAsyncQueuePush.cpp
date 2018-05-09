@@ -1,10 +1,13 @@
 ﻿#include "stdafx.h"
 #include "ConcurrentAsyncQueuePush.h"
+#include "ConcurrentAsyncQueueTestHelper.h"
+
+using namespace std::chrono_literals;
 
 INSTANTIATE_TEST_CASE_P(ConcurrentAsyncQueuePushParametized,
 	ConcurrentAsyncQueuePush,
 	testing::Combine(testing::Values(1, 3, 5, 7, 17, 23, 31),
-					testing::Values(1, 3, 5, 7, 17, 23, 31)));
+		testing::Values(1, 3, 5, 7, 17, 23, 31)));
 
 TEST_P(ConcurrentAsyncQueuePush, AddCopyElements)
 {
@@ -17,7 +20,6 @@ TEST_P(ConcurrentAsyncQueuePush, AddCopyElements)
 			return ConcurrentAsyncQueueTestHelper::add_copy_elements(*test_queue_, i, nb_values_to_add_);
 		}));
 	}
-	std::this_thread::sleep_for(250ms);
 
 	auto result_async = true;
 	for (auto &thread_result : test_threads_result_)
@@ -41,7 +43,6 @@ TEST_P(ConcurrentAsyncQueuePush, AddMoveElements)
 			return ConcurrentAsyncQueueTestHelper::add_move_elements(*test_queue_, i, nb_values_to_add_);
 		}));
 	}
-	std::this_thread::sleep_for(250ms);
 
 	auto result_async = true;
 	for (auto &thread_result : test_threads_result_)
